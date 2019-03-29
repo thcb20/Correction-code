@@ -1,0 +1,165 @@
+{
+  "name": "new",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "JQpnK",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "usernameID",
+      "name": "Store Member Info"
+    },
+    {
+      "channelName": "ticket-${tempVars(\"username\")}",
+      "categoryID": "560541880903794689",
+      "topic": "<@${tempVars(\"usernameID\")}>",
+      "position": "",
+      "storage": "1",
+      "varName": "ticket",
+      "name": "Create Text Channel"
+    },
+    {
+      "channel": "3",
+      "varName": "ticket",
+      "info": "1",
+      "storage": "1",
+      "varName2": "iDD",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "3",
+      "varName": "ticket",
+      "permission": "SEND_MESSAGES",
+      "state": "1",
+      "name": "Set Channel Permissions"
+    },
+    {
+      "storage": "3",
+      "varName": "ticket",
+      "permission": "READ_MESSAGES",
+      "state": "1",
+      "name": "Set Channel Permissions"
+    },
+    {
+      "channel": "3",
+      "varName": "ticket",
+      "member": "1",
+      "varName2": "",
+      "permission": "SEND_MESSAGES",
+      "state": "0",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticket",
+      "member": "1",
+      "varName2": "",
+      "permission": "READ_MESSAGES",
+      "state": "0",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#FFFFFF",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Bot developed by Scrumpy#0625",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${member} Your ticket has been created! ${tempVars(\"ticket\")}.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#FFFFFF",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Bot developed by Scrumpy#0625",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${member} Please describe your desired service!\nWe need:\n> Product (gamemode)\n> Info (detials)\n> Budget ($$$)\n> Timeframe (deadline)",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "ticket",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "5",
+      "varName": "ticket",
+      "message": "${serverVars(\"salesRepRole\")}",
+      "storage": "1",
+      "varName2": "salesRepTAG",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "3",
+      "varName": "ticket",
+      "toChange": "1",
+      "newState": "<@${tempVars(\"usernameID\")}>",
+      "name": "Edit Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "salesRepTAG",
+      "name": "Delete Message"
+    }
+  ]
+}
